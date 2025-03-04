@@ -38,5 +38,18 @@ class StudentOperations {
         return null;  // Return null if position is out of bounds
     }
 
+    // Method to update student details based on PRN
+    public boolean updateStudent(int prn, String name, String branch, String batch, float cgpa) {
+        Student student = searchByPRN(prn);
+        if (student != null) {
+            student.setName(name);
+            student.setBranch(branch);
+            student.setBatch(batch);
+            student.setCGPA(cgpa);
+            return true;  // Update successful
+        }
+        return false;  // Student not found
+    }
+
     
 }
