@@ -16,5 +16,21 @@ class StudentOperations {
         for (Student student : students) { student.display(); }
     }
 
-   
+     // Method to search for a student by PRN
+    public Student searchByPRN(int prn) {
+        for (Student student : students) {
+            if (student.getPRN() == prn) return student;
+        }
+        return null;  // Return null if student not found
+    }
+
+    // Method to search for a student by name
+    public Student searchByName(String name) {
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) return student;
+        }
+        return null;  // Return null if student not found
+    }
+
+     
 }
