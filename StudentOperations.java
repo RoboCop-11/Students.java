@@ -32,5 +32,11 @@ class StudentOperations {
         return null;  // Return null if student not found
     }
 
-     
+     // Method to search for a student by position (index in list)
+    public Student searchByPosition(int position) {
+        if (position >= 0 && position < students.size()) return students.get(position);
+        return null;  // Return null if position is out of bounds
+    }
+
+    
 }
