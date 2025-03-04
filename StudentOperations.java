@@ -51,5 +51,14 @@ class StudentOperations {
         return false;  // Student not found
     }
 
+    // Method to delete a student by PRN
+    public boolean deleteStudent(int prn) {
+        Student student = searchByPRN(prn);
+        if (student != null) {
+            students.remove(student);
+            return true;  // Deletion successful
+        }
+        return false;  // Student not found
+    }
     
 }
